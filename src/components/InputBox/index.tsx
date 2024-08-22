@@ -2,19 +2,22 @@ import React from 'react';
 import './style.css';
 
 interface Props {
-  label : string;
+  label: string;
   type: 'text' | 'password';
-  placehoder: string;
+  placeholder: string;
   buttonName?: string;
 }
 
-export default function InputBox() {
+export default function InputBox({label, type, placeholder, buttonName }: Props) {
+
   return (
     <div className="input-box" >
-    <div className="label">인증번호</div>
+    <div className="label">{label}</div>
     <div className="input-area">
-        <input type="text" placeholder="인증번호 4자리를 입력해주세요." />
-        <div className="input-button disable">인증 확인</div>
+        <input type={type} placeholder={placeholder} />
+        {/* //buttonName 존재하면 뿌리고 존재 안하면 안뿌린다는 뜻 */}
+        {buttonName && <div className="input-button disable">{buttonName}</div>}
+        
     </div>
     <div className="message"></div>
 </div>
