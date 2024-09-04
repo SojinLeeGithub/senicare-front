@@ -145,6 +145,7 @@ function SignUp({ onPathChange }: AuthComponentProps) {
         onPathChange('로그인');
     };
 
+     
     useEffect(() => {
         if (!password || !passwordCheck) return;
 
