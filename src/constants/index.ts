@@ -9,7 +9,7 @@ export const CS_UPDATE_PATH = (customNumber: string | number) => `${customNumber
 export const MM_PATH = '/mm';
 export const HR_PATH = '/hr';
 export const HR_DETAIL_PATH = (userId: string) => `${userId}`;
-export const HR_UPDATE_PATH = (userId: string) => `${userId}/update`;
+
 export const OTHERS_PATH = '*';
 
 // variable: 절대경로 상수 //
@@ -23,7 +23,7 @@ export const CS_ABSOLUTE_UPDATE_PATH = (customNumber: string | number) => `${CS_
 export const MM_ABSOLUTE_PATH = MM_PATH;
 export const HR_ABSOLUTE_PATH = HR_PATH;
 export const HR_ABSOLUTE_DETAIL_PATH = (userId: string) => `${HR_PATH}/${HR_DETAIL_PATH(userId)}`;
-export const HR_ABSOLUTE_UPDATE_PATH = (userId: string) => `${HR_PATH}/${HR_UPDATE_PATH(userId)}`;
+
 export const OTHERS_ABSOLUTE_PATH = OTHERS_PATH;
 
 // variable: HTTP BEARER TOKEN COOKIE NAME //

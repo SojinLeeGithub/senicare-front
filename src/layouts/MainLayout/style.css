@@ -66,5 +66,74 @@
 }
 
 #layout-side-navigation {
+    /* background-color: rgb(233, 172, 233); */
     grid-area: side;
+    padding: 16px 12px;
+}
+
+#layout-side-navigation .navigation {
+
+    /* background-color: rgb(127, 204, 255); */
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#layout-side-navigation .navigation-item {
+
+    /* background-color: rgb(255, 240, 105); */
+    display: flex;
+    align-items: center;
+    gap: 16px;
+
+    border-radius: 6px;
+    padding: 8px 24px;
+
+    color: var(--gray-color);
+    font-size: 16px;
+    font-weight: 400;
+   
+} 
+
+#layout-side-navigation .navigation-item:hover{
+    cursor: pointer;
+    background-color: var(--primary-10-color);
+}
+
+#layout-side-navigation .navigation-item.active {
+    background-color: var(--primary-color);
+    color: rgba(255, 255, 255, 1);
+
+} 
+
+#layout-side-navigation .icon {
+    width: 24px;
+    height: 24px;
+
+    background-size: 100% 100%;
+}
+
+.cs-icon {
+    background-image: url(/public/images/navigation-icon/cs-icon.png);
+}
+.mm-icon {
+    background-image: url(/public/images/navigation-icon/mm-icon.png);
+}
+.hr-icon {
+    background-image: url(/public/images/navigation-icon/hr-icon.png);
+}
+
+.cs-active-icon {
+    background-image: url(/public/images/navigation-active-icon/cs-active-icon.png);
+}
+.mm-active-icon {
+    background-image: url(/public/images/navigation-active-icon/mm-active-icon.png);
+}
+.hr-active-icon {
+    background-image: url(/public/images/navigation-active-icon/hr-active-icon.png);
+}
+
+
+#layout-side-navigation .icon.active {
+    opacity: 0.5;
 }
