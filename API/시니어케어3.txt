@@ -1,0 +1,64 @@
+요양사 nurses
+(아이디, 비밀번호, 이름, 전화번호, 인증번호, 가입경로, sns 아이디)
+전화번호 인증 tel auth number
+(전화번호, 인증번호)
+전화번호 인증이 끝난 사용자만 등록할 수 있으므로 관리해줌
+
+
+고객 customers
+(고객 사진, 고객 이름, 생년월일, 담당자, 주소, 지역 고객번호)
+
+용품 tools
+(용품번호, 용품명, 용도, 개수)
+
+
+관리 기록 care record
+(날짜, 내용, 사용 용품, 개수, 담당 요양사, 고객)
+
+<nurses 테이블>
+들어갈 내용: 아이디, 비밀번호, 이름, 전화번호, 가입경로, sns 아이디
+
+- user_id 		VARCHAR(20) 	NN UQ PK
+- password 	VARCHAR(255)	NN *암호화 되면 길어지는 것 때문에 255로 잡아줌
+- name 		VARCHAR(15) 	NN
+- tel_number 	VARCHAR(11) 	NN UQ FK(tel_auth_number)
+- join_path 	VARCHAR(5) 	NN
+- sns_id 		VARCHAR(255) 
+
+<tel auth number 테이블>
+들어갈 내용: 전화번호, 인증번호
+
+- tel_number VARCHAR(11) NN UQ PK
+- auth_number VARCHAR(4) NN 
+
+<customers 테이블>
+들어갈 내용: 고객 사진, 고객 이름, 생년월일, 담당자, 주소, 지역, 고객번호
+
+- profile_image	 TEXT 		NN 
+- name 		 VARCHAR(15) 	NN 
+- birth 		 VARCHAR(6) 	NN 
+- charger 	 VARCHAR(20) 	NN FK(nurses)
+- address 	 TEXT 		NN 
+- location 	 VARCHAR(30) 	NN 
+- custom_number   INT 		NN UQ PK AI
+
+<tools 테이블>
+들어갈 내용: 용품번호, 용품명, 용도, 개수
+
+- tool_number 	INT 		NN UQ AI PK
+- name		VARCHAR(255)	NN
+- purpose	TEXT		NN
+- count		INT		NN
+
+<care record 테이블>
+들어갈 내용: 날짜, 내용, 사용 용품, 개수, 담당 요양사, 고객
+- record_number 	INT 		NN AI PK UQ
+- record_date	DATE		NN
+- contents	TEXT		NN
+- used_tool	INT		FK(tools)
+- count		INT		
+- charger		VARCHAR(20)	NN FK(nurses)
+- customer_Id	INT		NN FK(customers)
+
+
+
