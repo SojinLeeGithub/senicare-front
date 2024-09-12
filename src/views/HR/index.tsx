@@ -7,6 +7,6 @@ export default function HR() {
 
     // render : 인사 관리 컴포넌트 렌터링 //
   return (
-    <div>HR</div>
+    <div></div>
   )
 }
