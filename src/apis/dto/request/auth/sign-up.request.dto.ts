@@ -6,6 +6,7 @@ export default interface SignUpRequestDto {
     telNumber: string;
     authNumber: string;
     joinPath: string;
-    // 필수가 아닌 값이라서 ? 찍는것 (안넣어도 된다는 뜻)
-    snsId?: string;  
+    // 필수가 아닌 선택값이라서 '?' 찍는것 (안넣어도 된다는 뜻)
+    snsId: string | null; 
 }
+
