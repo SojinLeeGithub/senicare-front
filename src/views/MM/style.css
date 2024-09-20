@@ -1,0 +1,80 @@
+#mm-wrapper {
+    /* 1차원 레이아웃 = display, 왼-오 쌓일 때 = flex */
+    display: felx;
+    /* 쌓이는 방향 */
+    flex-direction: column;
+    gap: 16px;
+}
+
+#mm-wrapper .post-patch-box {
+
+    display: flex;
+    /* 교차축 끝지점에 정렬일 때 */
+    align-items: end;
+    gap: 16px;
+
+    border-radius: 8px;
+    /* solid = 실선 */
+    border: 1px solid rgba(238,238,238,1);
+    padding: 24px;
+
+    background-color: rgba(255,255,255,1);
+}
+
+#mm-wrapper .top {
+    display: flex;
+    /* 주축 정렬 + 양쪽 끝 */
+    justify-content: space-between;
+    /* 교차축에 대한 정렬 + 양 끝단 */
+    align-items: end;
+
+}
+
+#mm-wrapper .main {
+    display: flex;
+    flex-direction: column;
+
+    border-radius: 8px;
+    border: 1px solid rgba(238,238,238,1);
+
+    background-color: rgba(255,255,255,1);
+}
+
+#mm-wrapper .bottom {
+    display: flex;
+    justify-content: center;
+
+}
+
+#mm-wrapper .post-patch-input-container {
+    /* flex grow */
+    flex: 1;
+
+    display: flex;
+    gap: 20px;
+}
+
+#mm-wrapper .input-box{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    width: 200px;
+}
+
+#mm-wrapper .input-label{
+    color: rgba(64,64,64,1);
+
+    font-size: 16px;
+    font-weight: 700;
+}
+
+#mm-wrapper .top-text{
+    color: rgba(138,146,166,1);
+    font-size: 16px;
+    font-weight: 400;
+}
+
+#mm-wrapper .top-text .emphasis {
+    color: rgba(64,64,64,1);
+}
