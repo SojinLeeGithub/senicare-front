@@ -1,5 +1,5 @@
 export default interface Tool {
-    tooNumber :  number;
+    toolNumber: number;
     name: string;
     purpose: string;
     count: number;
