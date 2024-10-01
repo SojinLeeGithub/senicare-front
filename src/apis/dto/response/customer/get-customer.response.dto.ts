@@ -8,6 +8,7 @@ export default interface GetCustomerResponseDto extends ResponseDto {
     birth: string;
     chargerName: string;
     charger: string;
+    chargerId: string;
     address: string;
     location: string;
 }
